@@ -8,11 +8,9 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
-
+    let preco = Number(prompt("Informe o preço do produto:"));
     //Processamento
-
-    
+    let mensagem = (preco <= 280) ? "O preço do produtor ficará R$" + (preco + (preco * 0.20)) : (preco <= 700) ? "O preço do produtor ficará R$" + (preco + (preco * 0.15)) : (preco <= 1500) ? "O preço do produtor ficará R$" + (preco + (preco * 0.10)) : "O preço do produtor ficará R$" + (preco + (preco * 0.05));
     //Saída
-
+    alert(mensagem)
 </script>
