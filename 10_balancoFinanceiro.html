@@ -10,11 +10,17 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
-
+    let dAgua = Number(prompt("Informe o valor da despesa de água:").replace(",", ".").trim());
+    let dEnergia = Number(prompt("Informe o valor da despesa de Energia:").replace(",", ".").trim());
+    let dTelefone = Number(prompt("Informe o valor da despesa de Telefone:").replace(",", ".").trim());
+    let dSupermercado = Number(prompt("Informe o valor da despesa do Supermercado:").replace(",", ".").trim());
+    let salario = Number(prompt("Informe quanto recebe por mês:").replace(",", ".").trim());
     //Processamento
 
-    
+    let mensagem = ((dAgua + dEnergia + dTelefone + dSupermercado) < salario) ? `Você ganha mais do que recebe! Sobra um total de R$${salario - (dAgua + dEnergia + dTelefone + dSupermercado)}.` : `Você gasta mais do que recebe! Falta um total de R$${(dAgua + dEnergia + dTelefone + dSupermercado) - salario} para pagar suas contas.`;
+
     //Saída
-    
+
+    alert(mensagem);
+
 </script>

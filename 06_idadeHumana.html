@@ -8,11 +8,13 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
-
+    let cao = Number(prompt("Qual a idade do seu cão?").trim())
+    let porte = prompt("Qual o porte do seu cão? \n Porte pequeno (P) \n Porte médio (M) \n Porte grande (G)").toLowerCase().trim()
     //Processamento
-
-    
-    //Saída
-
+    if (isNaN(cao)) alert("idade invalida.")
+    else {
+        let mensagem = (porte === "p") ? "A idade do seu cão é de " + (cao * 5) : (porte === "m") ? "A idade do seu cão é de " + (cao * 6) : (porte === "g") ? "A idade do seu cão é de " + (cao * 7) : "valor invalido."
+        //Saída
+        alert(mensagem)
+    }
 </script>

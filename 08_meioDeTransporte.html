@@ -6,12 +6,15 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    let pCombustivel = Number(prompt("Informe o preço do litro do combustível").replace(",", ".").trim());
+    let litro = Number(prompt("Informe a quantidade de litros utilizados para se deslocar para o trabalho diariamente:").replace(",", ".").trim());
+    let pTransportePublico = Number(prompt("Informe o preço do transporte público que paga diariamente:").replace(",", ".").trim());
     //Processamento
-
-    
-    //Saída
-
-    
+    if (isNaN(pCombustivel) || isNaN(litro) || isNaN(pTransportePublico)) alert("Invalido, Informe apenas números.")
+    else {
+        let pTransporteParticular = pCombustivel * litro
+        let mensagem = (pTransporteParticular > pTransportePublico) ? "O meio de transporte mais barato é o público, você pagará R$" + (pTransportePublico + pTransportePublico).toFixed(2) + " para ir e voltar do trabalho diariamente." : (pTransportePublico > pTransporteParticular) ? "O meio de transporte mais barato é o particular, você pagará R$" + (pTransporteParticular + pTransporteParticular).toFixed(2) + " para ir e voltar diariamente." : "Os dois transportes sairão pelo mesmo preço, você pagará R$" + (pTransportePublico + pTransportePublico)
+        //Saída
+        alert(mensagem)
+    }
 </script>

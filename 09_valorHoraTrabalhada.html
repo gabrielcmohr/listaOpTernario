@@ -8,11 +8,10 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+    let horasTrabalhadas = Number(prompt("Informe quantas horas trabalha semanalmente:").replace(",", ".").trim());
+    let pHoraTrabalhada = Number(prompt("Informe quanto recebe por hora trabalhada:").replace(",", ".").trim());
     //Processamento
-
-    
+    let mensagem = (horasTrabalhadas <= 45) ? "Não houve adicional. Você recebeu R$" + (horasTrabalhadas * pHoraTrabalhada).toFixed(2) + ". O preço de cada hora trabalhada foi de R$" + (pHoraTrabalhada).toFixed(2) + "." : (horasTrabalhadas <= 60) ? "Haverá adicional de 20%, você recebeu R$" + (horasTrabalhadas * (pHoraTrabalhada + (pHoraTrabalhada * 0.2))).toFixed(2) + ". O preço de cada hora trabalhada foi de R$" + (pHoraTrabalhada + (pHoraTrabalhada * 0.2)).toFixed(2) : "Haverá adicional de 30%, você recebeu R$" + (horasTrabalhadas * (pHoraTrabalhada + (pHoraTrabalhada * 0.3))).toFixed(2) + ". O preço de cada hora trabalhada foi de R$" + (pHoraTrabalhada + (pHoraTrabalhada * 0.3)).toFixed(2);
     //Saída
-
+    alert(mensagem)
 </script>
